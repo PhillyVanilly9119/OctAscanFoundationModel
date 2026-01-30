@@ -25,14 +25,26 @@ We recommend using open-source OCT datasets. Since raw A-scans are rare, this co
 2. **OCTDL**: [Optical Coherence Tomography DL Dataset](https://arxiv.org/abs/2212.01962)
 
 ## Setup
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+
+### Option A: Anaconda (Recommended)
+1. Open **Anaconda Prompt**.
+2. Navigate to this directory.
+3. Run:
+   ```cmd
+   setup_with_conda.bat
    ```
-2. Training (Self-Supervised Pre-training):
-   ```bash
-   python train.py --mode pretrain --data_path /path/to/images --batch_size 64
+
+### Option B: Standard Python (venv)
+1. Run:
+   ```cmd
+   setup_and_train.bat
    ```
+
+## Usage
+### Training (Self-Supervised Pre-training)
+```bash
+python train.py --mode pretrain --data_path ./data/OCTDL_HF --batch_size 64
+```
 3. Fine-tuning (Segmentation):
    ```bash
    python train.py --mode finetune --task segmentation --data_path /path/to/masks

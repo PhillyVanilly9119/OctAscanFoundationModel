@@ -8,3 +8,5 @@ einops
 pillow
 albumentations
 scipy
+datasets
+huggingface_hub

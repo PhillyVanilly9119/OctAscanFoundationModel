@@ -1,3 +1,6 @@
+"""Runfile for training OCT Foundation Model
+"""
+
 import torch
 from torch.utils.data import Dataset
 import numpy as np
